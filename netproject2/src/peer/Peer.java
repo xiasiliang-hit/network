@@ -1,15 +1,12 @@
 package peer;
 
-import java.net.Socket;
-
+import java.net.*;
+import java.io.*;
+import java.util.*;
 
 public class Peer {
 	
-	private int myPeer_ID;
-	private int peer_ID;
-	private Socket socket;
-	private byte[] bitfield;
-	private boolean interested;
+	 
 	
 	public int getPeer_ID() {
 		return peer_ID;
@@ -50,5 +47,9 @@ public class Peer {
 	public void setMyPeer_ID(int myPeer_ID) {
 		this.myPeer_ID = myPeer_ID;
 	}
-	
+	int myPeer_ID;
+	 int peer_ID;
+	 Socket socket;
+	 byte[] bitfield;
+	 boolean interested;
 }

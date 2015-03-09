@@ -1,12 +1,9 @@
 package peer;
-
-import java.net.Socket;
+import java.io.*;
+import java.util.*;
+import java.net.*;
 
 public class MessageList {
-	
-	private Socket socket;
-	private byte[] message;
-	
 	public Socket getSocket() {
 		return socket;
 	}
@@ -22,6 +19,6 @@ public class MessageList {
 	public void setMessage(byte[] message) {
 		this.message = message;
 	}
-	
-	
+         Socket socket;
+	 byte[] message;
 }

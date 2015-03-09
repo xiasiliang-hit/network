@@ -1,11 +1,12 @@
 package peer;
 
 import java.net.Socket;
+import java.io.*;
+import java.util.*;
 
 public class HasCompleteFile {
 
-	private Socket socket;
-	private boolean hasDownLoadedCompleteFile;
+	 
 	
 	public Socket getSocket() {
 		return socket;
@@ -22,4 +23,7 @@ public class HasCompleteFile {
 	public void setHasDownLoadedCompleteFile(boolean hasDownLoadedCompleteFile) {
 		this.hasDownLoadedCompleteFile = hasDownLoadedCompleteFile;
 	}
+        
+        Socket socket;
+	 boolean hasDownLoadedCompleteFile;
 }

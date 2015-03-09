@@ -1,31 +1,20 @@
 package peer;
 
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.LinkedList;
+import fileAceess.PeerInfoFileReader;
+import fileAceess.Logger;
+import fileAceess.CommonConfigFileReader;
+import fileAceess.MyFileReader;
+import socket.IncomingPeerListener;
+import socket.OutgoingConnectionRequest;
+import java.io.*;
+import java.util.*;
 
-import peer.message.BitField;
-import peer.message.Piece;
-import thread.IncomingPeerListener;
-import thread.OutgoingConnectionRequest;
-import fileManager.CommonConfigFileReader;
-import fileManager.Logger;
-import fileManager.MyFileReader;
-import fileManager.PeerInfoFileReader;
+import msg.*;
 
 public class PeerProcess {
 	
-    private int numberOfPreferredNeighbors;
-    private int unchokingInterval;
-    private int optimisticUnchokingInterval;
-    public static String fileName;
-    private long fileSize;
-    private long pieceSize;
-    private int totalPieces;
-    private int peer_ID;
-    private int port;
-    private boolean hasCompleteFile;
+     
     public static HashMap<Integer, Piece> map;
     public static ArrayList<Peer> peers = new ArrayList<Peer>();
     public static ArrayList<Integer> allPeerID;
@@ -93,4 +82,15 @@ public class PeerProcess {
 //			}
 		}	
 	}
+        
+        int numberOfPreferredNeighbors;
+     int unchokingInterval;
+     int optimisticUnchokingInterval;
+    public static String fileName;
+     long fileSize;
+     long pieceSize;
+     int totalPieces;
+     int peer_ID;
+     int port;
+     boolean hasCompleteFile;
 }

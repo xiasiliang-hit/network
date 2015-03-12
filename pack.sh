@@ -1,12 +1,22 @@
 target='./PeerToPeer'
 from='./netproject2' 
 
-cp -Rf $from/src $target
+rm -Rf $target/src
+mkdir $target/src
+cp -Rf $from/src/* $target/src
 cp $from/dist/netproject2.jar $target
 cp $from/Common.cfg $target
 cp $from/PeerInfo.cfg $target
 #copy data file for 1001 node
 cp -Rf $from/peer_1001 $target
+cp -Rf $from/peer_1002 $target
+cp -Rf $from/peer_1003 $target
+cp -Rf $from/peer_1004 $target
+cp -Rf $from/peer_1005 $target
+cp -Rf $from/peer_1006 $target
+
+
+
 
 #copy to local running env
 local_run_env='./network_local'
